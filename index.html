@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <meta http-equiv="X-UA-Compatible" content="ie=edge">
+           <title>24 Автомаркет</title>
+          
+           <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+           <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/css/main.css">       <!--  php -->
+           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet" type="text/css">
+
+       </head>
+       <body>
+       <!-- <h1>Hello world</h1>
+       <h2>Hello everybody in world1</h2> -->
+<!--           <img class="section-header-img" src="../img/marketika.png">-->
+             <!-- Header -->
+             <header class="section-outer section-header">                                                             <!-- outer еще одна общая обертка -->
+                 <div class="section-inner ">
+                     <div class="main-navigation">  
+                     <div class="section-header-top section-header-top__copyright_and_links">
+                        <div class="section-header-logo"> 
+                         <a  href="#"> 
+                             <img class="section-header-logo_img" src="images/logotipcar.jfif" alt="logotip"></a> 
+                         </div>
+                         
+                     <nav class="menu">
+                         <ul class="menu__list">
+                             <!-- <li class="menu__list-item"><a href="#">головна</a></li>  БЭМ <li class="menu__list-item"> <a href="#">home</a> </li> -->
+                              <li class="menu__list-tel"><a href="#">tel.050-046-92-22</a></li>
+                             <!--<li class="menu__list-item"><a href="#">автозапчастини</a></li> --> 
+                             <li class="menu__list-item"><a class="js-modal-open link" href="#modal-2"><span>контакти</span></a></li>
+                             
+                             
+                             <!-- <section class="section section--1">
+                                <a class="js-modal-open link" href="#modal-1"><span>Open modal 1</span></a> / <a class="js-modal-open link" href="#modal-2"><span>Open modal 2</span></a>
+                            </section> -->
+                           
+
+                             
+                             
+                         </ul>
+                     </nav>
+                     <!-- <div class="header-btn">
+                         <a class="login" href="">login</a> 
+                         <a class="sign-up" href="">tel.050-046-92-22</a>
+                     </div>   -->
+                     </div>
+                     </div> 
+                       <div class="section-header-content">
+                         <div class="section-header-wrapper">  <!-- дополнительная обертка, элементы будут распологаться flex -->
+                             <div class="section-header-wrapper__title">Знайди своє бездоганне авто</div>
+                             <div class="section-header-wrapper__subtitle">
+                                Ми раді допомогти Вам з вибором.<br> Пропонуєм широкий вибір найпопулярніших марок авто з США
+                             </div>
+                            
+                            <!-- mail php -->                      
+            
+                              <form action="send.php" method="post">                                                                        <!--   Добавил тег Form для PhP если писать сообщения -->
+                                    <div class="section-header-wrapper__form">                                    <!--      Элементы формы в отдельные обертки, больше контроля над ними -->  
+                                                                                                                      <!-- Добавил тег Form для PhP если писать сообщения , тег <form> сломал структуру, потому ,что дочерние элементы являются flex -->
+                                    <div class="section-header-wrapper__form-input">
+                                       <input type="text" placeholder="Ваше Ім'я"/>
+                                   </div>
+                                   <div class="section-header-wrapper__form-input">
+                                       <input type="text" placeholder="Ваш Email"/>
+                                   </div>
+                                   <div class="section-header-wrapper__form-button">
+                                       <button class="btn-main">Підписатися на нові пропозиції</button>
+                                   </div> 
+
+
+                                    <!-- Hidden Required Fields
+                                    <input type="hidden" name="project_name" value="Auto market 24">
+                                    <input type="hidden" name="admin_email" value="automarket24us@gmail.com">
+                                    <input type="hidden" name="form_subject" value="footer form">
+                                    END Hidden Required Fields -->
+         
+                                    <!-- <input  type="text" name="Name" placeholder="You name..." required><br>
+                                    <input  type="text" name="E-mail" placeholder="You E-mail..." required><br>
+                                    <input  type="text" name="Phone" placeholder="You phone..."><br>
+                                    <button type="submit" name="SEND">Send</button> -->
+
+
+                                    <!-- <input type="text" name="login" placeholder="Enter login" required />
+                                    <input type="password" name="pass" placeholder="Enter parol" required />
+                                    <input type="email" name="email" placeholder="Enter email" required />
+                                    <input type="tel" name="tel" placeholder="Enter tel" required />
+
+                                    <input type="submit" value="Отправить данные" /> -->
+
+
+                             <!-- </div> -->
+
+
+                              
+
+
+                                    <!-- <form class="form" id="form" name="form">
+                                        <input type="text" class="form-field" name="name" placeholder="Введите ваше имя">
+                                        <input type="text" class="form-field" name="phone" placeholder="Введите ваш телефон">
+                                        <button class="form-button"><span class="text-button">Отправить заявку</span></button>
+                                    </form> -->
+                                         
+                             </form>
+                             
+                             <!--/ mail php -->
+
+                            </div>
+                     </div>
+                 </div>                                                                                                 <!-- Контент который центрируется -->
+                </header>
+             <!-- / Header-->
+
+             <!-- Promo -->
+             <section class="section-outer section-promo">                                                              <!-- outer еще одна общая обертка -->
+                 <div class="section-inner">
+                     <div class="section-promo-1">
+                         <div class="section-promo-1__content">
+                             <div class="title">
+                                Автомобілі з США в Україні - швидко і недорого
+                             </div>
+                             <div class="description-item">                                                             <!--внутри каждого item находятся иконка, текст и описание - ОПТИМИЗАЦИЯ, ПЕРЕИСПОЛЬЗУЕМ section-promo-2-->
+                                 <div class="description-item__title">Ключовий момент - ціна.</div>
+                                 <div class="description-item__text">
+                                     Надійним і чітко налагодженим шляхом ми зможемо пригнати для вас в Україну з США авто під ваш запит, причому його стан, ціна і швидкість доставки вас приємно здивують.
+                                 </div>
+                             </div>
+                             <div class="description-item">                                                              <!--внутри каждого item находятся иконка, текст и описание - ОПТИМИЗАЦИЯ, ПЕРЕИСПОЛЬЗУЕМ section-promo-2-->
+                                 <div class="description-item__title">Комфортна покупка авто з Америки в Києві та Україні</div>
+                                 <div class="description-item__text">
+                                     На аукціонах в США авто можна купити майже вполовину дешевше, ніж такі ж в нашій країні, і навіть з урахуванням того, що їх доведеться переганяти на значне відстань, це буде для вас вигідно.
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="video ">     
+                            <a class="video__link" href="https://youtu.be/2W9O0rMljh4">
+                               <picture>
+                                <source srcset="https://i.ytimg.com/vi_webp/2W9O0rMljh4/maxresdefault.webp" type="image/webp">  
+                                <img class="video__media" src="https://i.ytimg.com/vi/2W9O0rMljh4/maxresdefault.jpg" alt="video-test">  
+                               </picture> 
+                            </a>           
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" 
+                                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>   
+                         </div>
+                     </div>
+                     <br>
+                     <br>
+                     <hr>                    
+                      <div class="section-slider">                                                                  
+                            <div class="section-slider__title">
+                                АУКЦІОН <em>- COPART -</em>  ВИГІДНА ПРОПОЗИЦІЯ
+                            </div>
+                     </div>                 
+                     <div class="wrapper">
+                        <div class="image-slider swiper-container ">                                 <!-- Главный контейнер слайдера -->
+                             <div class="image-slider__wrapper swiper-wrapper">                     <!-- Обязательная оболочка -->
+                                  <div class="image-slider__slide swiper-slide">                     <!-- Слайд 1 -->
+                                     <div class="image-slider__image">
+                                         <img class="image-slider__img" src="images/copart/audi-31108401-1.jfif" alt="Слайд 1">
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button>                                     
+                                  </div>
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 2 -->
+                                     <div class="image-slider__image">
+                                         <img class="image-slider__img" src="images/copart/audi-31108401-2.jfif" alt="Слайд 2">
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                        <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                   </button> 
+                                  </div>
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 3 -->
+                                     <div class="image-slider__image">
+                                         <img class="image-slider__img" src="images/copart/audi-31108401-3.jfif" alt="Слайд 3">
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 4 -->
+                                     <div class="image-slider__image">
+                                         <img  class="swiper-lazy image-slider__img"  data-src="images/copart/audi-31108401-4.jfif" src="images/1x1.png" alt="Слайд 4">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 5 -->
+                                     <div class="image-slider__image">
+                                         <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-5.jfif" src="images/1x1.png" alt="Слайд 5">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 6 -->
+                                     <div class="image-slider__image ">
+                                         <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-6.jfif" src="images/1x1.png" alt="Слайд 6">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>
+                                     <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                     <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 7 -->
+                                    <div class="image-slider__image ">
+                                        <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-7.jfif" src="images/1x1.png" alt="Слайд 7">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                    <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                 </div> 
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 8 -->
+                                    <div class="image-slider__image ">
+                                        <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-8.jfif" src="images/1x1.png" alt="Слайд 8">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                    <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                 </div> 
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 9 -->
+                                    <div class="image-slider__image ">
+                                        <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-9.jfif" src="images/1x1.png" alt="Слайд 9">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                    <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                 </div> 
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 10 -->
+                                    <div class="image-slider__image ">
+                                        <img class="swiper-lazy image-slider__img" data-src="images/copart/audi-31108401-10.jfif" src="images/1x1.png" alt="Слайд 10">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <span class="text-slider"> AUDI Q5 PREMIUM 2017 двигун 2.0 пробіг 0 km 5700$</span><br>
+                                    <button class="image-slider__btn active-btn-slider">
+                                          <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                                     </button> 
+                                 </div> 
+                             </div>
+                             
+                             <div class="swiper-button-prev"></div>            <!-- Добавляем если нам нужны стрелки управления  -->
+                             <div class="swiper-button-next"></div>
+                             <div class="swiper-pagination"></div>             <!-- Добавляем если нам нужна пагинация  -->
+                             <br>
+                             <br>
+                             <br>
+                             <hr> 
+                             <!-- <div class="swiper-scrollbar"></div>              Добавляем если нам нужна полоса прокрутки  -->
+                        </div>
+                     </div>   
+
+                     <div class="section-slider">                                                                  
+                        <div class="section-slider__title">
+                            АВТО - ЗАРАЗ В УКРАЇНІ - НЕ ТРЕБА ЧЕКАТИ - КУПУЙ
+                        </div>
+                 </div>                 
+                 <div class="wrapper">
+                    <div class="image-slider swiper-container ">                                 <!-- Главный контейнер слайдера -->
+                         <div class="image-slider__wrapper swiper-wrapper">                     <!-- Обязательная оболочка -->
+                              <div class="image-slider__slide swiper-slide ">                     <!-- Слайд 1 -->
+                                 <div class="image-slider__image">
+                                     <img src="images/inUkraine/kia_2014/kia_1.jpg" alt="Слайд 1">
+                                 </div>
+                                 <span>Kia optima <br> 2014 110000km hybrid 2.4<br> 13000$</span><br>
+                                 <button class="image-slider__btn active-btn-slider">
+                                    <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                               </button> 
+                              </div>
+                              <div class="image-slider__slide swiper-slide">                      <!-- Слайд 2 -->
+                                 <div class="image-slider__image">
+                                     <img src="images/inUkraine/kia_2014/kia_6.jpg" alt="Слайд 2">
+                                 </div>
+                                 <span>Kia optima <br> 2014 110000km hybrid 2.4<br> 13000$</span><br>
+                                 <button class="image-slider__btn active-btn-slider">
+                                    <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                               </button> 
+                              </div>
+                              <div class="image-slider__slide swiper-slide">                      <!-- Слайд 3 -->
+                                 <div class="image-slider__image">
+                                     <img src="images/inUkraine/kia_2014/kia_4.jpg" alt="Слайд 3">
+                                 </div>
+                                 <span>Kia optima <br> 2014 110000km hybrid 2.4<br> 13000$</span><br>
+                                 <button class="image-slider__btn active-btn-slider">
+                                    <a class="js-modal-open link" href="#modal-2"><span>Купити</span></a>
+                               </button> 
+                              </div> 
+                         </div>
+                             <br>
+                             <br>
+                             <hr> 
+                         <div class="swiper-button-prev"></div>            <!-- Добавляем если нам нужны стрелки управления  -->
+                         <div class="swiper-button-next"></div>
+             
+                         <div class="swiper-pagination"></div>             <!-- Добавляем если нам нужна пагинация  -->
+             
+                         <!--<div class="swiper-scrollbar"></div>              Добавляем если нам нужна полоса прокрутки  -->
+                    </div>
+                 </div>   
+
+                     <div class="section-slider">                                                                  
+                        <div class="section-slider__title">
+                             АВТО ПРИДБАНІ НАШИМИ КЛІЄНТАМИ
+                        </div>
+                     </div>
+                     <div class="wrapper">
+                        <div class="image-slider swiper-container ">                                 <!-- Главный контейнер слайдера -->
+                             <div class="image-slider__wrapper swiper-wrapper">                     <!-- Обязательная оболочка -->
+                                  <div class="image-slider__slide swiper-slide">                     <!-- Слайд 1 -->
+                                     <div class="image-slider__image">
+                                         <img src="images/soldout/audi1.JPG" alt="Слайд 1">
+                                     </div>
+                                  </div>
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 2 -->
+                                     <div class="image-slider__image">
+                                         <img src="images/soldout/bmw1.JPG" alt="Слайд 2">
+                                     </div>
+                                  </div>
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 3 -->
+                                     <div class="image-slider__image">
+                                         <img src="images/soldout/porshe1.JPG" alt="Слайд 3">
+                                     </div>
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 4 -->
+                                     <div class="image-slider__image">
+                                         <img class="swiper-lazy" data-src="images/soldout/audi2.JPG" src="images/1x1.png" alt="Слайд 4">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 5 -->
+                                     <div class="image-slider__image">
+                                         <img class="swiper-lazy" data-src="images/soldout/audi3.JPG" src="images/1x1.png" alt="Слайд 5">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>        
+                                  </div> 
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 6 -->
+                                     <div class="image-slider__image">
+                                         <img class="swiper-lazy" data-src="images/soldout/bmw2.JPG" src="images/1x1.png" alt="Слайд 6">
+                                         <div class="swiper-lazy-preloader"></div>
+                                     </div>
+                                  </div>
+                                  <div class="image-slider__slide swiper-slide">                      <!-- Слайд 7 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/porshe2.JPG" src="images/1x1.png" alt="Слайд 7">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>  
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 8 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/porshe3.JPG" src="images/1x1.png" alt="Слайд 8">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 9 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/audi4.JPG" src="images/1x1.png" alt="Слайд 9">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 10 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/audi5.jpg" src="images/1x1.png" alt="Слайд 10">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 11 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/porshe4.JPG" src="images/1x1.png" alt="Слайд 11">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>
+                                 <div class="image-slider__slide swiper-slide">                      <!-- Слайд 12 -->
+                                    <div class="image-slider__image">
+                                        <img class="swiper-lazy" data-src="images/soldout/audi6.JPG" src="images/1x1.png" alt="Слайд 12">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                 </div>      
+                             </div>
+                             
+                             <div class="swiper-button-prev"></div>            <!-- Добавляем если нам нужны стрелки управления  -->
+                             <div class="swiper-button-next"></div>
+                 
+                             <div class="swiper-pagination"></div>             <!-- Добавляем если нам нужна пагинация  -->
+                 
+                             <!-- <div class="swiper-scrollbar"></div>              Добавляем если нам нужна полоса прокрутки  -->
+                        </div>
+                     </div>     
+
+
+
+                    
+
+
+                     <div class="section-promo-2">                                                                        <!--внутри секции находятся три элемента -->
+                         <div class="description-item">                                                                   <!--внутри каждого item находятся иконка, текст и описание - ОПТИМИЗАЦИЯ, ПЕРЕИСПОЛЬЗУЕМ section-promo-2-->
+                             <div class="description-item__icon">
+                                 <img src="images/icon-service1.png" alt="icon-service" />
+                             </div>
+                             <div class="description-item__title">Кузовний ремонт</div>
+                             <div class="description-item__text">Залежно від тяжкості отриманого збитку, кузовний ремонт може бути як цілого автомобіля
+                                  або великих частин, так і невеликих ділянок або окремих деталей</div>
+                         </div>
+                         <div class="description-item">                                                                  <!--внутри каждого item находятся иконка, текст и описание -->
+                             <div class="description-item__icon">
+                                 <img src="images/icon-service3.png" alt="icon-service" />
+                             </div>
+                             <div class="description-item__title">Зварювальні роботи</div>
+                             <div class="description-item__text">Зварювання кузова авто проводиться напівавтоматичним зварювальним апаратом, якість зварювальних 
+                                 будь-якої складності гарантується
+                             </div>
+                         </div>
+                         <div class="description-item">                                                                  <!--внутри каждого item находятся иконка, текст и описание -->
+                             <div class="description-item__icon">
+                                 <img src="images/icon-service2.png" alt="icon-service" />
+                             </div>
+                             <div class="description-item__title">Доставка запчастин</div>
+                             <div class="description-item__text">Підбор і доставка запасних частин з США, Європи, під замовлення</div>
+                         </div>
+
+                     </div>
+                 </div>                                                                                                  <!-- Контент который центрируется -->
+             </section>
+             <!-- / Promo-->
+
+             <!-- founder -->
+             <section class="section-outer section-founder">                                                             <!-- outer еще одна общая обертка -->
+                 <div class="section-inner">
+                     <div class="section-founder__img">
+                         <img src="images/car-fax-4.png" alt="founder">
+                     </div>
+                     <div class="section-founder__content">
+                        <div class="section-founder__content-name">
+                            Copart
+                        </div>
+                         <div class="section-founder__content-text">                 <!-- .section-founder__content-post     удалить этот класс - -->
+                            100% ОНЛАЙН АУКЦІОН АВТО
+                         </div>
+                         <div class="section-founder__content-text">
+                             Величезний вибір б/у авто з різним ступенем ушкоджень.
+                             У Copart є більш 205 710 автомобілів на продаж! 
+                         </div>
+                        
+                     </div>
+                 </div>                                                                                                  <!-- Контент который центрируется -->
+             </section>
+             <!-- / founder-->
+
+             <!-- plans -->
+             <section class="section-outer section-plans">                                                               <!-- outer еще одна общая обертка -->
+                 <div class="section-inner">
+                     <div class="section-plans__title">CARFAX</div>
+                     <div class="section-plans__subtitle">Офіційний сервіс для перевірки історії авто.
+                        Міститься інформація про кількість власників, пробіг, історія ДТП і багато іншого.</div>
+                         <div class="section-founder__img">
+                            <img src="images/car-fax-1.jpg" alt="founder">
+                        </div>
+                     <div class="section-plans__list">
+                         <div class="section-plans__list-item active">                                                   <!-- Активный блок - выделен цветом и кнопкой -->
+                             <div class="section-plans__list-item_title">FREE</div>
+                             <div class="section-plans__list-item_price"><span class="prefix">$0</span><span class="postfix">/1 auto</span></div>    <!-- <span> inline элемент - в строчку располагаются -->
+                             <div class="section-plans__list-item_description">
+                                 Дешевий карфакс, так званий carfax free.
+                                 Даних в ній буде набагато менше в порівнянні з повним звітом.
+                             </div>
+                             <div class="section-plans__list-item_button">                                               <!--Кнопка идет как ссылка, нет никакой формы -->
+                                <a class="active-btn js-modal-open link" href="#modal-1">Перевірити авто</a>
+                             </div>
+                         </div>
+                         <div class="section-plans__list-item">                                                          <!-- Неактивный блок - не выделен цветом и кнопкой -->
+                             <div class="section-plans__list-item_title">PREMIUM</div>
+                             <div class="section-plans__list-item_price"><span class="prefix">$1</span><span class="postfix">/10 auto</span></div>    <!-- <span> inline элемент - в строчку располагаются -->
+                             <div class="section-plans__list-item_description">
+                                Наші фахівці нададуть вам докладний звіт з Carfax і інших сервісів. Ми розуміємо, що ретельний аналіз історії лота перед початком торгів обов'язковий.
+                             </div>
+                             <div class="section-plans__list-item_button">                                              <!--Кнопка идет как ссылка, нет никакой формы -->
+                                 <a class="inactive-btn js-modal-open link" href="#modal-1">Перевірити авто</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>                                                                                                  <!-- Контент который центрируется -->
+             </section>
+             <!-- / plans-->
+
+             <!-- free -->
+             <section class="section-outer section-free">                                                                <!-- outer еще одна общая обертка -->
+                 <div class="section-inner">
+                     <div class="section-free__title">Купуй авто вже сьогодні</div>
+                     <div class="section-free__description">Вже через 60 хвилин БЕЗКОШТОВНО отримаєте
+                        5 КРАЩИХ ВАРІАНТІВ АВТОМОБІЛІВ, ЯКІ ЗАРАЗ Є НА АУКЦІОНІ</div>
+                     <div class="section-free__button">
+                        <a class="inactive-btn-free js-modal-open link" href="#modal-1"><span>Заповніть лот авто</span></a>
+                     </div><br>
+                 </div><br>
+                 <div>
+                     <iframe src="https://www.copart.com/ru/" frameborder="0"></iframe>  
+                 </div>                                                                                               <!-- Контент который центрируется -->
+             </section>
+             <!-- / free-->
+
+             <!-- footer -->
+             <section class="section-footer">                                                                   <!-- outer еще одна общая обертка -->
+                 <div class="section-inner">
+                     <div class="section-footer__logo">
+                         24 Авто маркет
+                     </div>
+                     <ul class="section-footer__nav">
+                         <li><a href="#">Про нас</a></li>
+                         <li><a href="#">Сервіс</a></li>                        <!-- .footer-active удалить-->
+                         <li><a href="#">Поширені запитання</a></li>
+                         <li><a href="#">Блог</a></li>
+                         <li><a class="js-modal-open link" href="#modal-2"><span>контакти</span></a></li>
+                     </ul>
+                     <div class="section-footer__copyright_and_links">
+                         <div class="section-footer__copyright_and_links-links">
+                     <ul class="helper-link">
+                         <li><a href="#">Telegram</a></li>
+                         <li><a href="#">Facebook</a></li>
+                         <li><a href="#">Instagram</a></li>
+                     </ul>
+                         </div><br>
+                         <div class="section-footer__copyright_and_links-copyright">e-mail: automarket24us@gmail.com</div>
+                     </div>
+                 </div>                                                                                                 <!-- Контент который центрируется -->
+             </section>
+             <!-- / footer-->
+
+             <!-- modal window -->
+             <!-- <section class="section section--1">
+                 <a class="js-modal-open link" href="#modal-1"><span>Open modal 1</span></a> / <a class="js-modal-open link" href="#modal-2"><span>Open modal 2</span></a>
+             </section>
+             <section class="section section--2">2</section>
+             <section class="section section--3">3</section> -->
+
+              <div class="modal modal--s" id="modal-1">      <!-- modal 1 -->
+                 <div class="modal__dialog">
+                    <div class="modal__dialog-header">
+                        <div class="modal__dialog-header-content">
+                            Замовити дзвінок
+                        </div>
+                        <div class="modal__dialog-header-close">
+                            <button class="js-modal-close modal__dialog-header-close-btn"><span>&times;</span></button>
+                        </div>
+                    </div>
+                    <div class="modal__dialog-body">
+                        <div>Форма відправки</div>
+                        <button id="js-add-content-temp">Заповнити форму</button>
+                    </div>
+                    <div class="modal__dialog-footer">
+                        <button class="js-modal-close modal__dialog-footer-close-btn">Закрити</button>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="modal modal--s" id="modal-2">      <!-- modal 2 -->
+                <div class="modal__dialog">
+                   <div class="modal__dialog-header">
+                       <div class="modal__dialog-header-content">
+                           Контакти
+                       </div>
+                       <div class="modal__dialog-header-close">
+                           <button class="js-modal-close modal__dialog-header-close-btn"><span>&times;</span></button>
+                       </div>
+                   </div>
+                   <div class="modal__dialog-body">
+                       <div>Vodafone: 050-046-92-22<br>
+                            Kиївстар: 067-128-47-21<br>
+                            Viber: 050-046-92-22<br>
+                            Telegram: 067-128-47-21</div>
+                   </div>
+                   <div class="modal__dialog-footer">
+                       <button class="js-modal-close modal__dialog-footer-close-btn">Закрити</button>
+                   </div>
+                </div>
+             </div>
+
+             
+                 
+                      
+
+             <!--/ modal window -->      
+
+             <script src="js/video.js"></script>
+             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+             <script src="js/script.js"></script>
+             <script src="js/scripts.js"></script>
+
+             <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>  -->
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	         <script src="js/scriptmail.js"></script> 
+
+             <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+             <script src="js/scriptmail1.js"></script>
+             <script src="plugins/jquery-maskedinput/jquery.maskedinput.js"></script> -->
+      
+         </body>
+</html>
+
