@@ -1,0 +1,1123 @@
+                                                                ///*Импорт в основной фаил*/
+    @import 'normalize.scss';
+                                                              ///*Шрифты будут в разных местах, сохраним в миксин*/
+    // === Mixins ===
+    @mixin font-lato {
+      font-family: 'Lato', sans-serif;
+    }
+    @mixin  font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    // === / Mixins === //
+
+    //=== Variables==//
+    $color-white:#ffffff;
+    //=== Variables==//
+
+    // $color-main: pink;
+    // $color-secondary: none;
+    // h1 {
+    //   color: $color-secondary;
+    // }
+
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    // Small devices (landscape phones, 576px and up)
+    $screen-sm: 576px;
+    $screen-xs-max: 575px;                                      /* the most smollest ( 0 , 575)*/
+    $screen-sm-max: 767px;
+    // Medium devices (tablets, 768px and up)
+    $screen-md: 768px;
+    $screen-md-max: 991px;
+    // Large devices (desktops, 992px and up)
+    $screen-lg: 992px;
+    $screen-lg-max: 1199px;
+    // Extra large devices (large desktops, 1200px and up)
+    $screen-xl: 1200px;
+
+    //=== Common ===//
+    * {
+      box-sizing: border-box;                                   /*box-sizing, вычисление размеров ширины изначально по дефолту своеобразно*/
+                                                                /*100% ширины и плюсуются margin и padding, для того, чтоб этого избежать, браузер считае ширину включая padding input */
+    }
+
+   body  {
+     @include font-lato;
+     
+     color: #414141;                                             /*задаем общий цвет, чтоб везде не писать его */
+   }
+   .section-outer {                                               /* Адаптив - горизонтальный scroll пропал, но не весь*/
+     padding-right: 20px;                                         /* Адаптив - найти блок, текст в котором влияет на горизонтальный scroll, убрать в браузере текст и проверить (горизонтальный scroll - не должен появляться)*/
+     padding-left: 20px;                                          /* Адаптив - 20 px теперь текст не прилипает всплошную к окну*/
+   }
+
+   .section-outer {}
+   .section-inner {
+      max-width: 1180px;                                           /* Адаптив ширину делаем максимаьной, а не фиксированной*/
+      margin: 0 auto;   
+   }
+
+                                                                  /*переиспользуем, оптимизация текста, шрифты похожие в блоках*/
+   .description-item {
+        &__icon {                                                 /*Стили меняем на &__icon*/
+          margin-bottom: 20px;                                    /*от иконки отступ вниз 20px*/
+        }
+        &__title {                                                /*Стили меняем на &__title*/
+          margin-bottom: 14px;                                    /*от названия до содержания отступ 14px*/
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: bold;
+        }
+        &__text {                                                  /*Стили меняем на &__text*/
+          font-size: 16px;
+          line-height: 28px;
+          font-weight: 300;
+          color: #6C6C6C;                                          /*пока напишем цвет сдесь, затем вынесем в переменную*/
+                                                                   /*margin-top: 14px; отступ от нижнего текста */
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit; /*от родителя наследует, если он черный*/
+        }
+
+     /*.subtitle{
+       font-size: 18px;
+       line-height: 22px;
+       font-weight: bold;
+       margin-top: 30px;                                            //отступ от подзаголовка до содержания
+        }*/
+    }
+   //=== Common ===//
+
+
+
+    //=== Header ===//
+
+    //=== Header - top ===//
+
+    .section-header  {
+      color: #ffffff;
+      background-image: url("../images/autotitle.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;                                       /*фоновая картинка растянулась*/
+      position: relative;
+
+     .section-header-top {
+      display: flex;
+      justify-content: space-between;
+      height: 65px;
+      align-items: center;
+      background-color: #01071f; 
+      border-radius: 5px;     
+    }
+
+    .section-header-logo_img {
+      max-width: 70px;
+      max-height: 60px;
+    }
+
+    .menu {
+     margin: 0 auto;
+    }
+
+    .menu__list {
+      display: flex;
+      list-style: none;
+      padding-left: inherit;    
+    }
+    .menu__list-tel a {
+      color: #fff;
+      font-weight: 600;
+      transition: all .3s;
+      text-decoration: none;
+      text-align: center;
+    }
+   
+    .menu__list-item {
+     padding-left: 50px;
+     display: flex;
+     flex-wrap: wrap;
+   }
+
+   .login {
+     margin-right: 44px;                 /* Внимание отступ внешний, если padding внутренний, то при наведении курсор захватывает дополеительную область.*/
+     color: #fff;
+     text-transform: uppercase;
+     font-weight: 600;
+     text-decoration: none;
+
+   }
+   .menu__list-item a {
+    //  opacity: 0.5;
+     color: #fff;
+     font-weight: 600;
+     text-transform: uppercase;
+     transition: all .3s;
+     text-decoration: none;
+   }
+
+  .menu__list a:hover {
+     opacity: 1;
+     color: #ff4605;
+   }
+    
+  .sign-up {
+    text-transform: uppercase;
+    color: #1b1927;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding: 8px 43px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+   //=== Header - top ===//
+
+                                                                    /*не нужно чтобы фон повторялся, нужно, чтоб он распологался по центру*/
+
+                                                                    /*располагается абсолютно правильно_1*/
+                                                                    /*т.к. располпгаются еще элементы, так мы вытягиваем это по высоте окна браузера*/
+
+
+
+                                                                   /*вытягиваем по высоте окна браузера*/
+     .section-inner {
+       height: 100vh;
+       position: relative;
+       z-index: 10;                                                 /*так как находится внтури него overlay поднимаем его выше*/
+       display: flex;                                               /*логотип и контент по флексу должны быть вертикальными*/
+       flex-direction: column;                                      /*чтобы логотип и элементы шли вертикально по flex*/
+     }
+
+                                                                   /*маска, черная на картинке, отдельным стилем поверх*/
+                                                                   /*в псевдоэлементе не будет контента*/
+                                                                   /*располагается абсолютно правильно_1*/
+                                                                   /*sass - $ амперсанд говорит о том, что вместо него подставится .section-header */
+     &::before {
+       content: '';
+       position: absolute;
+       z-index: 5;                                                 /*чтоб overlay не перекрывал контент*/
+                                                                   /*растянем его по периметру*/
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       background-color: rgba(20, 39, 41, .8);
+     }
+    //  rgba(20, 39, 41, .6);
+
+                                                                   /*sass - $$ амперсанд говорит о том, что вместо него подставится .section-header */
+      &-logo {
+        font-weight: bold;
+        font-size: 24px;
+        flex-shrink: 1;                                           /*чтоб логотип больше всего сжимался*/
+        padding-top: 0px;
+      }
+
+      &-content {
+        flex-grow: 1;                                             /*чтоб контент больше всего растягивался*/
+        display: flex;                                            /*контент должен быть тоже flex, внутри контента есть элементы которые нужно расположить по центру */
+        align-items: center;                                      /*элементы расположим по центру*/
+      }
+      &-wrapper {
+        margin: 0 auto;                                           /*сместился блок шапка влево и название с контентом, убрали ошибку*/
+
+        &__title,
+        &__subtitle {
+          text-align: center;                                       /*Относится только к title*/
+        }
+
+        &__title {
+          font-weight: bold;
+          font-size: 46px;
+          line-height: 60px;
+          margin-bottom: 16px;                                   /*Дистанция от subtitle до title, т.к. он уже зададим его по другому*/
+        }
+
+        &__subtitle {
+          @include  font-montserrat;
+
+          font-size: 18px;
+          line-height: 32px;
+          width: 80%;                                              /*чтоб центрировался subtitle*/
+          margin: 0 auto 44px;                                     /*margin-bottom: 44px;дистанция до input, чтоб не липла, т.к. он уже есть зададим его по другому, чтоб текст в две строки шёл*/
+        }
+
+        &__form {
+          display: flex;                                          /*элементы формы делаем в линию*/
+
+          &-input {
+            flex: 1;                                              /*для input растянем их, input сам по себе не имеет ширину 100%, контейнер большой, а инпут маленький */
+            // padding-right: 40px;    /*Адаптив - перенесли в @media */         /*дистанция для input*/
+            input {
+              @include  font-montserrat;
+
+              border:none;                                       /*у input нет бордеров*/
+              background: rgba(255, 255, 255, .25);              /*полупрозрачный белый фон*/
+              color: $color-white;
+              font-size: 16px;
+              line-height: 19px;
+              border-radius: 4px;
+              width: 100%;                                       /*растянем input*/
+              margin: 0;                                        /*обнуляем сразу для input*/
+              padding: 17px 20px;                              /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+              outline: none;                                    /*убирает выделение с input*/
+              transition: .2s;                                  /*интерактивные input */
+
+              &::placeholder {
+              color: $color-white;                            /*задаем белый цвет текста для placeholder*/
+              }
+
+              &:focus {
+                background: rgba(255, 255, 255, .5);            /*добавили focus , чтоб сделать интерактивные input */
+              }
+
+            }
+          }
+
+          &-button {
+            button {
+              //@include  font-montserrat;
+
+              font-size: 16px;
+              margin: 0;                                      /*обнуляем сразу для кнопки*/
+              padding: 17px 20px;                             /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+              border:none;                                    /*рамки у кнопки нет*/
+              background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
+              border-radius: 4px;
+              outline: none;                                   /*убирает выделение с кнопки*/
+              color: $color-white;                            /*задаем цвет у кнопки*/
+              cursor: pointer;
+              text-decoration: none;
+
+              &:hover {
+                background: linear-gradient(  to right, #FE4FA7, #FE985B);         /*добавили при наведении на кнопку интерактив  - hover*/
+              }
+            }
+          }
+        
+
+        @media (min-width: $screen-sm) {                    /* Адаптив  - для большего - input отступы   */ 
+            &-input {
+              margin-right: 40px;
+            }  
+        }
+        
+  
+           @media (max-width: $screen-xs-max) {                    /* Адаптив  - для меньшего - блоки input стали в колонку  */ 
+                flex-direction: column;   
+
+                &-input {
+                  margin-bottom: 10px;
+                }  
+                   
+                &-button {
+                   flex: 1;
+                   text-align: center;
+                                     
+                  // .btn-main {                               /* Адаптив  - расскоментировать блок кнопки если нужна на всю ширину кнопка */
+                  //     display: block;
+                  //     width: 100%;
+                  //   }
+                }    
+          }
+        }
+      }
+   }
+    //=== / header ===//
+
+    //=== promo ===//
+   .section-promo {
+      padding-top: 120px;                                      /*отступы для блока*/
+      padding-bottom: 120px;                                   /*отступы для блока*/
+   }
+
+    .section-promo-1 {
+      display: flex;                                          /*поскольку элементы распологаются горизонтально*/
+      &__content,
+      &__video {
+        flex-basis: 50%;                                      /*для обоих элементов content и video чтоб были одинаковой ширины*/
+      }
+
+
+      &__content {
+            // padding-right: 90px;                              /*Адаптив - убираем отступ справа у контента и переносим в @media */
+           .title{
+             font-size: 32px;                                 /*размер чуть отличался, был 36 - в три строки был текст*/
+             line-height: 51px;
+             font-weight: bold;
+             margin-bottom: 56px;                            /*отступ от названия*/
+           }
+           //  .subtitle{
+           //  font-size: 18px;
+           //  line-height: 22px;
+           //  font-weight: bold;
+           //  margin-top: 30px;                              /*отступ от подзаголовка до содержания */
+           //}
+           //.text{
+           //  font-size: 16px;
+           //  line-height: 27px;
+           //  font-weight: 300;
+           //  color: #6C6C6C;                               /*пока напишем цвет сдесь, затем вынесем в переменную*/
+           //  margin-top: 14px;                             /*отступ от нижнего текста */
+           //}
+      }
+           .description-item {
+             margin-top: 28px;                         /*отступы между текстом напротив видео*/
+           }
+
+      &__video {
+           img {
+             width: 100%;                              /*картинка еще не на всю ширину, для картинки внутри видео зададим width: 100% и height: auto*/
+             height: auto;                             /*принудительно растягиваем на всю ширину, а хотим чтоб высота подстраивалась автоматически*/
+             border-radius: 10px;
+             border: none;
+           }
+      }
+
+      @media (max-width: $screen-sm-max) {
+        flex-direction: column;       
+        .video {
+            order: -1;
+            margin-bottom: 20px;                      
+         }   
+      }
+
+
+      @media (max-width: $screen-md) {                /* Адаптив - видео при уменьшении экрана НЕ МЕНЯЕТСЯ*/
+        .video {
+          width: 100%;
+          height: auto;
+          padding-top: 160px;                      
+       } 
+      }
+
+      @media (min-width: $screen-md) {
+          &__content {
+            padding-right: 90px;
+        }
+      }
+
+
+    }
+
+    .section-promo-2 {
+      display: flex;                                   /*второй блок имеет отступ сверху, разделительную черту и элементы, которые располагаются также в ряд */
+      padding-top: 86px;                               /*отступ от блока до верхнего блока*/
+      margin-top: 120px;                               /*отступ в предыдущем блоке от картинки до границы рамки данного блока*/
+      border-top: 1px solid #e2e2e2;                   /*линия едва видно*/
+      text-align: center;                              /*три элемента расположим по центру*/
+
+      // .description-item + .description-item {          /* Адаптив - перенесли в @media */
+      //   margin-left: 40px;                             /*расстояние между description-item */
+      // }
+
+      @media (min-width: $screen-sm) {                    /* Адаптив  - для большего list - отступы  */ 
+        .description-item + .description-item {          /* Адаптив - перенесли в @media */
+          margin-left: 40px;                             /*расстояние между description-item */
+        }
+      }
+
+      @media (max-width: $screen-xs-max) {                    /* Адаптив  - для меньшего list - блоки стали в колонку  */ 
+        flex-direction: column;  
+
+        .description-item + .description-item {          /* для этого размера задаем отступ вертикальный - чтобы они не прилипали */
+          margin-top: 40px;                             
+        }
+      }
+
+      //.&__item {                                     /*разметку переносим в стили, внутри item располагается icon title и content*/
+      //  .icon {
+      //    margin-bottom: 20px;                       /*от иконки отступ вниз 20px*/
+      //  }
+      //  .title {
+      //    margin-bottom: 14 px;                      /*от названия до содержания отступ 14px*/
+      //  }
+      //  .content {}
+      //}
+    }
+      //===  video ===//
+    
+
+
+
+
+       .video {
+        flex-basis: 50%; 
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 33%;
+        background-color: #000000;
+      }
+
+      .video__media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;             
+      }
+
+      
+
+      .video__button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0;
+        width: 68px;
+        height: 48px;
+        border: none;
+        background-color: transparent;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      .video__button-shape {
+        fill: #212121;
+        fill-opacity: 0.8;
+      }
+
+      .video__button {
+        outline: none;
+      }
+
+      .video:hover .video__button-shape,
+      .video__button:focus .video__button-shape:hover {
+        fill: #ff0000;
+        fill-opacity: 1;
+      }
+
+      .video__button-icon {
+        fill: #ffffff; 
+      }
+
+      .video--enabled .video__button {
+        display: block;
+      }
+      
+
+      //=== / video ===//
+
+      //===  slider ===//
+
+      .section-slider {
+        padding-top: 40px;                                       //всему блоку задаем отступы
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &__title {
+          text-align: center;
+          font-size: 24px;
+          line-height: 29px;
+          font-weight: bold;
+          margin-bottom: 5px;                                    //от названия до слайдера
+        }
+      }
+
+      .image-slider__img {
+        position: relative;                             // button - centre
+        left: 50%;                                      // button - centre
+        transform: translate(-50%, 0);                  // button - centre
+      }
+
+      .active-btn-slider {
+        font-size: 16px;
+        margin: 0;                                      /*обнуляем сразу для кнопки*/
+        background-color: #53cca4;
+        border: 0;
+        border-radius: 6px;
+        padding: 15px 20px;
+        margin-left: 80px; 
+        outline: none;                                   /*убирает выделение с кнопки*/
+        color: $color-white;                            /*задаем цвет у кнопки*/
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+
+      .image-slider__btn {
+        //@include  font-montserrat;
+        position: relative;                             // button - centre
+        left: 50%;                                      // button - centre
+        transform: translate(-50%, 0);                  // button - centre
+        
+        font-size: 16px;
+        margin: 0;                                      /*обнуляем сразу для кнопки*/
+        padding: 17px 20px;                             /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+        border:none;                                    /*рамки у кнопки нет*/
+        background: linear-gradient(90deg, #1db14e 2.77%, #16a703 100%);
+        border-radius: 4px;
+        outline: none;                                   /*убирает выделение с кнопки*/
+        color: $color-white;                            /*задаем цвет у кнопки*/
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          background: linear-gradient(  to right, #04dbd1, #04dbd1);         /*добавили при наведении на кнопку интерактив  - hover*/
+        }
+      }
+      .text-slider {
+        margin-left: 50px;
+        text-align: center;
+        display: flex;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-right: 185px;
+        padding-left: 44px;  
+      }
+     
+      //=== / slider ===//
+      
+      //=== / promo ===//
+
+    //=== founder ===//
+   .section-founder {
+        background-color: #F6FAFD;
+        padding-top: 34px;
+
+        .section-inner {                                //будет flex - поэтому дописываем
+           display: flex;
+        }
+
+        // &__img {                                        /* Адаптив - Изображение должно resize - изменят размер - сама по себе фотография вытянется на свой размер*/
+        //   img {
+        //     min-width: 100%;
+        //   }                                        
+        //  }
+
+
+
+        // &__img {                                        /* Адаптив - перенесли в @media*/
+        //   align-self: flex-end;                        // изображение прибиваем к низу
+        // }
+
+        &__content {
+          // align-self: center;                         /* Адаптив - переносим в @media */  // делаем по центру текст
+          // padding-left: 50px;                         /* Адаптив - переносим в @media */
+
+          &-text {
+            @include  font-montserrat;
+
+            font-size: 24px;
+            line-height: 40px;
+          }
+          &-name {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: bold;
+          }
+          &-post {
+            font-size: 20px;
+            line-height: 29px;
+          }
+        }
+
+        @media (max-width: $screen-sm-max) {  /* для самого малого размера контент чтоб шел первым*/
+          .section-inner {
+            flex-direction: column;
+          }
+
+          &__img {                                        /* Адаптив - Изображение должно resize - изменят размер - сама по себе фотография вытянется на свой размер*/
+            img {
+              min-width: 100%;                        /* Картинка founder по центра */
+            }                                        
+           }
+
+          &__content {
+            order: -1;
+            margin-bottom: 40px;
+          }    
+        }
+
+        @media (min-width: $screen-md) {       /* Начиная отсюда он идет как flex: end; до этого нам этого не требуется*/
+          &__img {                                        
+            align-self: flex-end;                        
+          }
+        }
+
+        @media (min-width: $screen-sm) {
+          &__img {
+            align-self: flex-end;
+          }    
+          
+          &__content {
+            align-self: center;
+            padding-left: 50px;
+          }
+        }
+      }
+
+    //=== / founder ===//
+
+    //===  plans ===//
+   
+    .section-plans {
+         padding-top: 120px;                     //отступы блока
+         padding-bottom: 120px;
+         text-align: center;                     //по центру расположены
+
+         //&__title,
+         //  &__subtitle{
+         //  text-align: center;                   //по центру расположены  / удалил, убрал вверх
+         //}
+
+     &__title {
+         font-size: 36px;
+         line-height: 51px;
+         font-weight: bold;
+     }
+
+     &__subtitle {
+         font-size: 16px;
+         line-height: 28px;
+         font-weight: 300;
+         margin-bottom: 80px;                         /* Адаптив - перенесли из @media */
+         //margin-bottom: 110px;                    //дистанция от блока цены до блока заголовка
+        //  width: 50%;                               /* Адаптив - перенесли_откорректировали и вернули обратно @media */
+        //  margin: 0 auto 80px;                      /* Адаптив - перенесли в @media */   //Т.к. текст в две строки, margin-bottom закоментировали, а margin будет выглядеть по другому, сокращаем дистанцию до списка 80px
+     }
+     
+     &__list {
+         display: flex;                            /*элементы распологаются рядом и по списку - получается flex, контент в нем распологается по центру*/
+         justify-content: center;                  /*flex, контент в нем распологается по центру*/
+
+         &-item {
+             flex-basis: 370px;                    /* Это не - width - ширина элементов - блока - это flex-basis  , задали элементам ширину*/
+             padding: 60px 45px;                   /* Отступы сразу для всех элементов, задали примерно*/
+
+             &_title{
+                   font-size: 14px;
+                   line-height: 17px;
+                   font-weight: bold;
+                   text-transform: uppercase;
+                   margin-bottom: 26px;                //отступы
+             }
+             &_price{
+                   margin-bottom: 26px;                // отступы
+
+                    .prefix {
+                      font-size: 72px;
+                      line-height: 86px;
+                      font-weight: bold;
+                      color: #FE4FA7;
+                    }
+                    .postfix {
+                      font-size: 14px;
+                      line-height: 17px;
+                      font-weight: bold;
+                    }
+             }
+             &_description{
+                   font-size: 16px;
+                   line-height: 28px;
+                   font-weight: 300;
+                   margin-bottom: 50px;                               //отступ от невидимой рамки figma с текстом до кнопки 24 px, но задаем примерно 40px от текста до кнопки
+             }
+             &_button .active-btn{
+               @include  font-montserrat;
+
+               font-size: 16px;
+               margin: 0;                                               /*обнуляем сразу для кнопки*/
+               padding: 17px 20px;                                      /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+               border:none;                                             /*рамки у кнопки нет*/
+               background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
+               border-radius: 4px;
+               outline: none;                                          /*убирает выделение с кнопки*/
+               color: $color-white;                                    /*задаем цвет у кнопки*/
+               cursor: pointer;
+               text-decoration: none;
+
+               &:hover {
+                 background: linear-gradient(  to right, #FE4FA7, #FE985B);   /*добавили при наведении на кнопку интерактив  - hover*/
+               }
+             }
+
+             &_button .inactive-btn{
+               @include  font-montserrat;
+
+               font-size: 16px;
+               margin: 0;                                               /*обнуляем сразу для кнопки*/
+               padding: 17px 20px;                                      /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+               border: 1px solid #414141;                              /*рамку кнопке задали */
+               background: #ffffff;
+               border-radius: 4px;
+               outline: none;                                          /*убирает выделение с кнопки*/
+               color: #414141;                                         /*задаем цвет текста в кнопке*/
+               cursor: pointer;
+               text-decoration: none;
+               transition: .2s;
+
+               &:hover {
+               color: #FE4FA7;
+               border-color: #FE4FA7;                             /*добавили при наведении на кнопку интерактив  - hover*/
+               }
+             }
+
+             &.active {                                                //Если у нас item имеет класс .active
+               background-color: #F6FAFD;
+             }
+           }
+              
+              @media (max-width: $screen-xs-max) {                    /* Адаптив  - для меньшего list - блоки стали в колонку  */ 
+                    flex-direction: column;  
+              }
+         }
+
+        @media (min-width: $screen-sm) {                    /* Адаптив  - для большего   (по умолчанию subtitle и так на всю ширину*/
+             &__subtitle {
+                   width: 50%;
+                   margin-right: auto;
+                   margin-left: auto;
+                
+              }
+        }
+
+   }
+   //=== / plans ===//
+
+   //===  free ===//
+   .section-free {
+            text-align: center;
+            color: #ffffff;
+            background: linear-gradient(to right, #0d5db8 , #1981f8);  //градиент блока
+            padding-top: 120px;                              /*Адаптив - меняем отступы при сжатии */              //отступы
+            padding-bottom: 120px;                           /*Адаптив - меняем отступы при сжатии */              //отступы
+
+            &__title {
+              font-size: 66px;
+              line-height: 60px;
+              font-weight: bold;
+              margin-bottom: 26px;                                         //отступы
+            }
+
+            &__description {
+              @include font-montserrat;
+
+              font-size: 20px;
+              line-height: 30px;
+              //margin-bottom: 40px;                                      //отступы
+              // width: 50%;                                             /* Адаптив - для большего размера ширина нужна, а для меньшего нет*/
+              margin: 0 auto 40px;                                       //отступ - переопределил выше
+            }
+
+            &__button .inactive-btn-free {
+              font-size: 16px;
+              margin: 0;                                               /*обнуляем сразу для кнопки*/
+              padding: 17px 20px;                                      /*сначала 0 ставим, затем согласно макета 17px 20px, ...*/
+              border: 1px solid #FE4FA7;                               /*без рамки  */
+              background: #ffffff;
+              border-radius: 4px;
+              outline: none;                                          /*убирает выделение с кнопки*/
+              color: #414141;                                         /*задаем цвет текста в кнопке*/
+              cursor: pointer;
+              text-decoration: none;
+              transition: .2s;
+
+              &:hover {
+                color: #FE4FA7;
+                border-color: #000000;                             /*добавили при наведении на кнопку интерактив  - hover*/
+              }
+
+            }
+                      
+            @media (min-width: $screen-lg) {
+              padding-top: 120px;                              /*Адаптив - добавили отступы в $screen-lg */           
+              padding-bottom: 120px;                           /*Адаптив - добавили отступы в $screen-lg */ 
+
+
+              &__description {
+                width: 50%;                                           /* Адаптив - для большего размера ширина нужна, а для меньшего нет*/
+              }
+            }
+
+            @media (max-width: $screen-md-max) {
+              padding-top: 60px;                              /*Адаптив - добавили отступы в $screen-lg */           
+              padding-bottom: 60px;                           /*Адаптив - добавили отступы в $screen-lg */ 
+            }
+   }
+
+   iframe {
+    width: 100%;
+    min-height: 800px;
+    // width="1200" height="700"
+}
+   //=== / free ===//
+
+  //===  footer ===//
+   .section-footer {
+            padding-top: 80px;                                       //всему блоку задаем отступы
+            padding-bottom: 80 px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &__logo {
+              text-align: center;
+              font-size: 24px;
+              line-height: 29px;
+              font-weight: bold;
+              margin-bottom: 30px;                                    //от логотипа до навигации 30 px
+            }
+            &__nav {
+              display: flex;
+              justify-content: center;
+
+              margin: 0 0 75px;                                              //от навигации до нижней строки
+              padding: 0;
+              list-style: none;
+
+              li {
+                & + li {                                                     // делаем self
+                  margin-left: 60px;                                         // соседний элемент сдвигаем на 60px
+                }
+
+                 a {
+                   font-size: 14px;
+                   line-height: 20px;
+                   font-weight: bold;
+                   text-transform: uppercase;
+                   color: #464646;
+                   text-decoration: none;
+                   transition: .2s;                                       // интерактивные ссылки - одинаковая анимация для всей страницы
+
+                   &.footer-active,
+                   &:hover {                                              // интерактивные ссылки
+                     color: #ff4605;
+                   }
+                 }
+              }
+
+               @media (max-width: $screen-xs-max) {                      /* Адаптив - для nav меню*/
+                    flex-direction: column;
+                    text-align: center;                                   /* Адаптив - для маленьких контент по центру*/
+                   
+                    li {
+                      & + li {                                                        // делаем self
+                            margin-top: 10px;                                         // соседний элемент сдвигаем на 10px
+                            
+                      }
+                    }
+               }
+
+               @media (max-width: $screen-sm) {                    /* Адаптив - ВНИМАТЕЛЬНО - @media (max-width или min-width) */
+                    li {
+                      & + li {                                                     
+                             margin-left: 0px;           
+                      }
+                    }
+               }
+             }
+      
+
+            &__copyright_and_links {
+                @include font-montserrat;
+
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                line-height: 18px;
+                // width: 60%;                       /*Адаптив переносим в @media*/   // если дистанция между ними большая, можем изменить ширину контейнера, который все оборачивает
+                // margin: 0 auto;                   /*Адаптив переносим в @media*/   // width 60 % и margin по центру
+                margin-bottom: 93px;
+
+                @media (min-width: $screen-xl) {                                 /* Чтобы ты был width 80 %  для большего*/
+                 width: 60%;
+                 margin: 0 auto;
+                 padding-bottom: 40px;
+                }          
+                
+                @media (max-width: $screen-sm-max) {                    /* Адаптив  */
+                  flex-direction: column;
+                  text-align: center;
+                }
+            }
+          }
+
+   .helper-link {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+    //  display: flex;                                              /* Адаптив  - перенесли в @media и сделали inline-flex*/
+
+            li {
+              & + li {                                              // делаем self
+                margin-left: 60px;                                   //дистанция между элементами меньше - соседний элемент сдвигаем на 60px
+              }                                                     // если дистанция между ними большая, можем изменить ширину контейнера, который все оборачивает
+              a {
+                color: #464646;
+                text-decoration: none;
+                transition: .2s;                                    // интерактивные ссылки - одинаковая анимация для всей страницы
+               
+
+                &:hover {
+                  text-decoration: underline;                       // сделаем подчеркивание у ссылок - интерактив
+                }
+              }
+            }
+
+            @media (max-width: $screen-sm-max) {                    /* Адаптив  - для меньшего*/
+              display: inline-flex;
+              margin-top: 20px;
+              
+            }
+
+            @media (min-width: $screen-md) {                    /* Адаптив  - для большего*/
+              display: flex;
+            }
+   }
+   //=== / footer ===//
+
+   //=== modal window ===//
+   .section {
+     height: 100vh;
+     display: flex;                 //    1
+     align-items:center;            //    1
+     justify-content: center;       //    1
+     color:#ffffff;
+     font-size: 40px;
+
+     &--1 {background-color:#343434;}
+     &--2 {background-color:#2f3061;}
+     &--3 {background-color:#0e34a0;}
+   }
+
+   .link {
+    color:#ffffff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+   }
+
+   .modal {
+     $parent: &;
+
+     display: flex;                 //    1
+     align-items:center;            //    1
+     justify-content: center;       //    1
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     visibility: hidden;            //  activity
+     background-color: rgba(0, 0, 0, .4);
+     opacity: 0 ;                   //  activity
+     transition: .2s;
+     z-index: 9999;                 // modal first
+
+     &__dialog {
+       display: flex;
+       flex-direction: column;
+       overflow: hidden;
+       max-height: 80vh;
+       background-color: #ffffff;
+       border-radius: 8px;
+       transition: .2s;
+       transform: translateY(-50px);
+
+       &-header,
+       &-footer {
+          transition: .2s;            //  shadow
+
+       }
+       
+
+
+
+       &-header,
+       &-body,
+       &-footer {
+          padding: 20px 40px;
+
+       }
+
+       &-header {
+          display: flex;
+          align-items: center;
+
+              &-content {
+                  flex-grow: 1;
+                  font-size: 24px;      
+              }
+
+              &-close {
+                display: flex;
+                align-items: center;
+                  
+                &-btn {
+                    margin: 0;
+                    padding: 0;
+                    background: none;
+                    border: 0;
+                    cursor: pointer;
+                    font-size: 24px;
+                    line-height: 24px;
+
+                  }
+              }
+          }
+
+          &-body {
+              flex-grow: 1;                    //  for scroll bar
+              overflow: auto;                  //  for scroll bar
+          }
+          
+          &-footer-close-btn {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 8px 16px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 28px;
+            color: #354664;
+            cursor: pointer;
+            background-color: #ebedee;
+            border: 0;
+            border-radius: 4px;
+            transition: .2s;
+       
+       &:hover {
+            background-color: darken($color: #ebedee, $amount: 10%);
+        }
+      }
+    }
+   
+
+       &--s &__dialog { width: 300px; }
+       &--m &__dialog { width: 600px; }
+       &--l &__dialog { width: 900px; }
+
+       &--screen-height &__dialog { height: &screen-height; }
+
+       &--active {
+          visibility: visible;
+          opacity: 1;
+
+         #{$parent}__dialog {
+            transform: translateY(0);
+         }
+       }
+
+       &--has-scroll {
+        #{$parent}__dialog-header,
+        #{$parent}__dialog-footer {
+           position: relative;            //  shadow
+           z-index: 5;
+           box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+ 
+        }
+     }
+   }
+    
+  
+   //=== / modal window ===//
+
+   
+   
